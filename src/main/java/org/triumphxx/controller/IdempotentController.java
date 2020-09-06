@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.triumphxx.annotation.Idempotent;
+import org.triumphxx.annotation.TimeLog;
 import org.triumphxx.common.Result;
 import org.triumphxx.exception.IdempotentException;
 import org.triumphxx.token.TokenService;
@@ -30,6 +31,7 @@ public class IdempotentController {
      */
     @RequestMapping("/test")
     @Idempotent
+    @TimeLog
     public Result test(){
         System.out.println("你好");
         return Result.succ("你好");
@@ -39,12 +41,14 @@ public class IdempotentController {
      * @return
      */
     @RequestMapping("/test1")
+    @TimeLog
     public Result test1(){
         System.out.println("你好");
         return Result.succ("你好");
     }
 
     @GetMapping("/getToken")
+    @TimeLog
     public String getToken() throws IdempotentException {
         return tokenService.createToken();
     }
