@@ -15,7 +15,7 @@ import org.triumphxx.common.Result;
  * @微信公众号：北漂码农有话说
  * @网站：http://blog.triumphxx.com.cn
  * @GitHub https://github.com/triumphxx
- * @Desc:
+ * @Desc: 使用AOP环绕实现统计接口方法执行时间统计
  **/
 @Aspect
 @Component

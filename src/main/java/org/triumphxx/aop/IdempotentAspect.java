@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
  * @微信公众号：北漂码农有话说
  * @网站：http://blog.triumphxx.com.cn
  * @GitHub https://github.com/triumphxx
- * @Desc: 使用Aop的方式实现拦截
+ * @Desc: 使用Aop的方式实现拦截，校验接口幂等性
  **/
 @Component
 @Aspect
